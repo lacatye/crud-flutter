@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:crud_flutter/models/user.dart';
 import 'package:crud_flutter/data/dummy_users.dart';
 
-
 class UsersProvider with ChangeNotifier {
   final Map<String, User> _items = {...DUMMY_USERS};
 
@@ -23,5 +22,6 @@ class UsersProvider with ChangeNotifier {
       return;
     }
 
+  notifyListeners();
 }
 }
