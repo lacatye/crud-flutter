@@ -1,7 +1,9 @@
 import 'package:crud_flutter/providers/users_provider.dart';
+import 'package:crud_flutter/routes/user_form.dart';
 import 'package:crud_flutter/views/user_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:crud_flutter/routes/app_routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +22,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const UserList(),
+      routes: {
+        AppRoutes.HOME:(context) => UserList(),
+        AppRoutes.USER_FORM: (context) => UserForm()
+      },
     ),
     );
   }
